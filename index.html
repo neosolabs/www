@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="neosol — software engineering for complex systems, technical R&amp;D, infrastructure, and ambitious projects."
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="neosol — software engineering" />
+    <meta
+      property="og:description"
+      content="Software, infrastructure, and technical R&amp;D for ambitious projects."
+    />
+    <meta property="og:url" content="https://neosol.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="neosol — software engineering" />
+    <meta
+      name="twitter:description"
+      content="Software, infrastructure, and technical R&amp;D for ambitious projects."
+    />
+    <title>neosol — software engineering</title>
+    <link rel="canonical" href="https://neosol.io/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a class="logo" href="/" aria-label="neosol home">neosol</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="hero__eyebrow reveal">Software engineering</p>
+            <h1 id="hero-heading" class="hero__title reveal">
+              Engineering complex systems.
+            </h1>
+            <p class="hero__lead reveal">
+              Software, infrastructure, and technical R&amp;D for ambitious
+              projects that demand reliability and depth. Everything below is a
+              worked example&mdash;real algorithms and models, running live in
+              your browser.
+            </p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#contact">
+                Get in touch
+                <i
+                  class="fa-solid fa-arrow-right btn__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <a class="btn btn--ghost" href="#showcase">
+                See our approach
+                <i
+                  class="fa-solid fa-terminal btn__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero__panel reveal">
+            <figure
+              class="sci-viz"
+              id="hero-viz"
+              aria-labelledby="hero-viz-title"
+              aria-describedby="hero-viz-desc"
+            >
+              <figcaption class="sci-viz__header">
+                <span class="sci-viz__title" id="hero-viz-title"
+                  >Order book</span
+                >
+                <span class="sci-viz__subtitle"
+                  >price&ndash;time priority matcher &middot; live depth</span
+                >
+              </figcaption>
+              <p class="sci-viz__sr-only" id="hero-viz-desc">
+                Simulation of a limit order book matching engine. Incoming
+                orders match against resting liquidity by price and time, with
+                partial fills and spread updates.
+              </p>
+              <canvas
+                class="sci-viz__canvas"
+                width="400"
+                height="220"
+                role="img"
+                aria-label="Bid and ask depth around the mid price"
+              ></canvas>
+              <dl class="sci-viz__meta" aria-live="polite" aria-atomic="false">
+                <div class="sci-viz__meta-item">
+                  <dt>Bid</dt>
+                  <dd data-ob-bid>&mdash;</dd>
+                </div>
+                <div class="sci-viz__meta-item">
+                  <dt>Ask</dt>
+                  <dd data-ob-ask>&mdash;</dd>
+                </div>
+                <div class="sci-viz__meta-item">
+                  <dt>Spread</dt>
+                  <dd data-ob-spread>&mdash;</dd>
+                </div>
+                <div class="sci-viz__meta-item sci-viz__meta-item--full">
+                  <dt>Last event</dt>
+                  <dd data-ob-event>&mdash;</dd>
+                </div>
+                <div class="sci-viz__meta-item sci-viz__meta-item--full">
+                  <dt>Session volume</dt>
+                  <dd data-ob-vol>0</dd>
+                </div>
+              </dl>
+            </figure>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        id="capabilities"
+        class="capabilities"
+        aria-labelledby="capabilities-heading"
+      >
+        <div class="container">
+          <header class="section-header reveal">
+            <h2 id="capabilities-heading" class="section-label">
+              Capabilities
+            </h2>
+            <p class="section-intro">
+              Deep engineering across the stack—from firmware to production
+              infrastructure.
+            </p>
+          </header>
+
+          <ul class="card-grid" role="list">
+            <li class="card reveal">
+              <span class="card__icon" aria-hidden="true">
+                <i class="fa-solid fa-microchip"></i>
+              </span>
+              <h3 class="card__title">Systems &amp; embedded</h3>
+              <p class="card__text">
+                Low-level software, hardware interfaces, and platforms where
+                performance and correctness are non-negotiable.
+              </p>
+            </li>
+            <li class="card reveal">
+              <span class="card__icon" aria-hidden="true">
+                <i class="fa-solid fa-server"></i>
+              </span>
+              <h3 class="card__title">Infrastructure</h3>
+              <p class="card__text">
+                Reliable backends, deployment pipelines, and operational
+                foundations built to scale with your product.
+              </p>
+            </li>
+            <li class="card reveal">
+              <span class="card__icon" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </span>
+              <h3 class="card__title">Application engineering</h3>
+              <p class="card__text">
+                Custom software and high-performance systems—from trading
+                platforms to demanding real-time workloads.
+              </p>
+            </li>
+            <li class="card reveal">
+              <span class="card__icon" aria-hidden="true">
+                <i class="fa-solid fa-flask"></i>
+              </span>
+              <h3 class="card__title">Technical R&amp;D</h3>
+              <p class="card__text">
+                Prototyping, feasibility studies, and specialized engagements
+                when the problem is novel or underspecified.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        id="showcase"
+        class="showcase"
+        aria-labelledby="showcase-heading"
+      >
+        <div class="container showcase__grid">
+          <div class="showcase__copy">
+            <h2 id="showcase-heading" class="section-label reveal">
+              Development
+            </h2>
+            <p class="showcase__lead reveal">
+              We ship with discipline: clear architecture, rigorous validation,
+              and production-ready handoff—not demos that crumble under load.
+            </p>
+
+            <ul class="metric-row reveal" role="list">
+              <li class="metric-box">
+                <span class="metric-box__value">End-to-end</span>
+                <span class="metric-box__label">ownership</span>
+              </li>
+              <li class="metric-box">
+                <span class="metric-box__value">Production</span>
+                <span class="metric-box__label">grade delivery</span>
+              </li>
+              <li class="metric-box">
+                <span class="metric-box__value">Technical</span>
+                <span class="metric-box__label">depth first</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="showcase__terminal reveal">
+            <div
+              class="terminal"
+              role="img"
+              aria-label="Terminal showing audit, benchmark, test, and release of the matching engine"
+            >
+              <div class="terminal__chrome">
+                <span class="terminal__dot"></span>
+                <span class="terminal__dot"></span>
+                <span class="terminal__dot"></span>
+                <span class="terminal__title">~/project — zsh</span>
+              </div>
+              <div class="terminal__body">
+                <div
+                  class="terminal__viewport terminal__viewport--showcase"
+                  id="showcase-terminal-viewport"
+                >
+                  <div class="terminal__content">
+                    <div
+                      class="terminal__log"
+                      id="terminal-log"
+                      aria-live="polite"
+                      aria-relevant="additions"
+                    ></div>
+                    <span class="terminal__cursor" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="automation"
+        class="automation"
+        aria-labelledby="automation-heading"
+      >
+        <div class="container">
+          <header class="section-header reveal">
+            <h2 id="automation-heading" class="section-label">Automation</h2>
+            <p class="section-intro">
+              From build to multi-region production—every stage observable,
+              every rollout deliberate.
+            </p>
+          </header>
+
+          <figure
+            class="sci-viz pipeline-viz reveal"
+            id="pipeline-viz"
+            aria-labelledby="pipeline-viz-title"
+            aria-describedby="pipeline-viz-desc"
+          >
+            <figcaption class="sci-viz__header">
+              <span class="sci-viz__title" id="pipeline-viz-title"
+                >Delivery pipeline</span
+              >
+              <span class="sci-viz__subtitle"
+                >SDLC &middot; signed artifacts &middot; progressive regional
+                deploy</span
+              >
+            </figcaption>
+            <p class="sci-viz__sr-only" id="pipeline-viz-desc">
+              Animated pipeline showing software progressing through build,
+              test, sign, and publish stages, then deploying in parallel to
+              eu-west-1, us-east-1, and ap-southeast-1.
+            </p>
+            <canvas
+              class="sci-viz__canvas pipeline-viz__canvas"
+              width="640"
+              height="280"
+              role="img"
+              aria-label="SDLC pipeline with multi-region deployment progress"
+            ></canvas>
+            <dl class="sci-viz__meta" aria-live="polite" aria-atomic="false">
+              <div class="sci-viz__meta-item">
+                <dt>Stage</dt>
+                <dd data-pipe-stage>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Artifact</dt>
+                <dd data-pipe-artifact>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Regions</dt>
+                <dd data-pipe-regions>0 / 3 live</dd>
+              </div>
+              <div class="sci-viz__meta-item sci-viz__meta-item--full">
+                <dt>Status</dt>
+                <dd data-pipe-status>idle</dd>
+              </div>
+            </dl>
+          </figure>
+        </div>
+      </section>
+
+      <section
+        id="observability"
+        class="observability"
+        aria-labelledby="observability-heading"
+      >
+        <div class="container">
+          <header class="section-header reveal">
+            <h2 id="observability-heading" class="section-label">
+              Observability
+            </h2>
+            <p class="section-intro">
+              Instrumentation isn&rsquo;t a dashboard bolted on after the
+              fact&mdash;it&rsquo;s a design constraint. We wire metrics, traces, and
+              structured logs into a system as it&rsquo;s built, so request flow,
+              latency, and failure stay legible under load. The graph below is a
+              worked example: every edge a real request path.
+            </p>
+          </header>
+
+          <figure
+            class="sci-viz obs-viz reveal"
+            id="observability-viz"
+            aria-labelledby="obs-viz-title"
+            aria-describedby="obs-viz-desc"
+          >
+            <figcaption class="sci-viz__header">
+              <span class="sci-viz__title" id="obs-viz-title"
+                >Distributed trace</span
+              >
+              <span class="sci-viz__subtitle"
+                >live sample &middot; request path + span waterfall &middot;
+                &micro;s</span
+              >
+            </figcaption>
+            <p class="sci-viz__sr-only" id="obs-viz-desc">
+              A sampled request is traced live: it propagates hop by hop through
+              the service topology&mdash;gateway authenticates via auth, then the
+              matching-engine runs a pre-trade risk check, matches against the
+              order-book, and settles to the ledger (which appends to the
+              journal) while publishing to market-data and writing an audit
+              record&mdash;and its span waterfall builds underneath on the same
+              clock, showing each call's start time and duration in
+              microseconds. Ambient dots show background traffic; the slowest
+              span and any slow trace are highlighted.
+            </p>
+            <canvas
+              class="sci-viz__canvas obs-viz__canvas"
+              width="640"
+              height="440"
+              role="img"
+              aria-label="Live distributed trace: request path through the service topology with a synchronized span waterfall"
+            ></canvas>
+            <dl class="sci-viz__meta" aria-live="polite" aria-atomic="false">
+              <div class="sci-viz__meta-item">
+                <dt>Ingress</dt>
+                <dd data-obs-throughput>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Trace</dt>
+                <dd data-obs-trace>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Duration</dt>
+                <dd data-obs-duration>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item sci-viz__meta-item--full">
+                <dt>Slowest span</dt>
+                <dd data-obs-crit>&mdash;</dd>
+              </div>
+            </dl>
+          </figure>
+        </div>
+      </section>
+
+      <section id="risk" class="risk" aria-labelledby="risk-heading">
+        <div class="container">
+          <header class="section-header reveal">
+            <h2 id="risk-heading" class="section-label">Determinism</h2>
+            <p class="section-intro">
+              Some problems demand the exact right number, every time, with a
+              clear account of how it was reached. We take an unfamiliar
+              domain, model it from first principles, make the outcome
+              deterministic and reproducible, and define the analytics that keep
+              it auditable. Below is a worked example&mdash;real isolated-margin
+              risk math you can drive yourself.
+            </p>
+          </header>
+
+          <figure
+            class="sci-viz risk-viz reveal"
+            id="risk-viz"
+            aria-labelledby="risk-viz-title"
+            aria-describedby="risk-viz-desc"
+          >
+            <figcaption class="sci-viz__header">
+              <span class="sci-viz__title" id="risk-viz-title"
+                >Liquidation monitor</span
+              >
+              <span class="sci-viz__subtitle"
+                >BTC-PERP &middot; isolated margin &middot; drag the mark
+                &middot; riskiest first</span
+              >
+            </figcaption>
+            <p class="sci-viz__sr-only" id="risk-viz-desc">
+              Interactive isolated-margin risk engine. Drag the mark price line
+              on the chart, or use the mark price slider, to move BTC-PERP up or
+              down. Each open position's unrealized profit and loss recompute
+              live, and a position is liquidated when its margin ratio falls to
+              the maintenance level. Columns are sorted by proximity to
+              liquidation&mdash;the most at-risk position sits at the left and
+              positions glide between slots as the mark moves; each column shows
+              its percentage distance to liquidation.
+            </p>
+            <canvas
+              class="sci-viz__canvas risk-viz__canvas"
+              width="640"
+              height="340"
+              role="img"
+              aria-label="Open leveraged positions on a shared price axis with a draggable mark price and per-position liquidation levels"
+            ></canvas>
+            <div class="risk-viz__control">
+              <label class="risk-viz__control-label" for="risk-mark"
+                >Mark price</label
+              >
+              <input
+                class="risk-viz__slider"
+                id="risk-mark"
+                type="range"
+                aria-describedby="risk-viz-title"
+              />
+              <output
+                class="risk-viz__control-value"
+                for="risk-mark"
+                data-risk-markout
+                >&mdash;</output
+              >
+            </div>
+            <dl class="sci-viz__meta" aria-live="polite" aria-atomic="false">
+              <div class="sci-viz__meta-item">
+                <dt>Mark</dt>
+                <dd data-risk-mark>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Open interest</dt>
+                <dd data-risk-oi>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Unrealized PnL</dt>
+                <dd data-risk-upnl>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Positions</dt>
+                <dd data-risk-pos>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Liquidations</dt>
+                <dd data-risk-liq>0</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Insurance inflow</dt>
+                <dd data-risk-ins>&mdash;</dd>
+              </div>
+            </dl>
+          </figure>
+        </div>
+      </section>
+
+      <section id="range" class="range" aria-labelledby="range-heading">
+        <div class="container">
+          <header class="section-header reveal">
+            <h2 id="range-heading" class="section-label">Range</h2>
+            <p class="section-intro">
+              From fintech to medtech. The discipline that clears a trade in
+              microseconds is the discipline that catches an arrhythmia in a
+              live signal&mdash;correct processing, deterministic detection, and
+              systems you can trust when the stakes turn physical. Below, a
+              lead-II ECG, classified beat by beat, flagging ectopic beats as
+              they arrive.
+            </p>
+          </header>
+
+          <figure
+            class="sci-viz ecg-viz reveal"
+            id="ecg-viz"
+            aria-labelledby="ecg-viz-title"
+            aria-describedby="ecg-viz-desc"
+          >
+            <figcaption class="sci-viz__header">
+              <span class="sci-viz__title" id="ecg-viz-title"
+                >Patient monitor</span
+              >
+              <span class="sci-viz__subtitle"
+                >ECG lead II &middot; live &middot; beat classification</span
+              >
+            </figcaption>
+            <p class="sci-viz__sr-only" id="ecg-viz-desc">
+              A live lead-II electrocardiogram scrolls across the strip while a
+              detector classifies every heartbeat from its timing and shape.
+              Normal beats are marked N; premature, wide beats are flagged as
+              ventricular ectopics, labelled V and drawn in red. Heart rate,
+              rhythm, the last R-to-R interval, and running beat counts update
+              continuously.
+            </p>
+            <canvas
+              class="sci-viz__canvas ecg-viz__canvas"
+              width="640"
+              height="220"
+              role="img"
+              aria-label="Live lead-II ECG waveform with per-beat normal and ventricular-ectopic classification"
+            ></canvas>
+            <dl class="sci-viz__meta" aria-live="polite" aria-atomic="false">
+              <div class="sci-viz__meta-item">
+                <dt>Heart rate</dt>
+                <dd data-ecg-hr>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>Rhythm</dt>
+                <dd data-ecg-rhythm>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item">
+                <dt>R&ndash;R interval</dt>
+                <dd data-ecg-rr>&mdash;</dd>
+              </div>
+              <div class="sci-viz__meta-item sci-viz__meta-item--full">
+                <dt>Beats classified</dt>
+                <dd data-ecg-analysis>&mdash;</dd>
+              </div>
+            </dl>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-heading">
+        <div class="container about__inner">
+          <h2 id="about-heading" class="section-label reveal">About</h2>
+          <div class="about__content reveal">
+            <p>
+              neosol is a software engineering partner for challenging technical
+              work—from custom applications and low-level systems to embedded
+              platforms, high-performance software, and specialized engineering
+              engagements. We take on projects where rigor, clarity, and
+              execution matter.
+            </p>
+            <p class="about__secondary">
+              Our team works closely with founders and engineering leads who need
+              a capable partner—not a vendor delivering slide decks. We prefer
+              direct communication, honest estimates, and code you can maintain.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <div class="container contact__inner">
+          <div class="contact__box reveal">
+            <h2 id="contact-heading" class="contact__title">
+              Let&rsquo;s talk about your project.
+            </h2>
+            <p class="contact__text">
+              Tell us what you&rsquo;re building. We&rsquo;ll respond promptly
+              with a straightforward next step.
+            </p>
+            <a class="contact__email" href="mailto:hello@neosol.io">
+              <i
+                class="fa-regular fa-envelope contact__icon"
+                aria-hidden="true"
+              ></i>
+              hello@neosol.io
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <span class="site-footer__brand">neosol</span>
+        <a class="site-footer__email" href="mailto:hello@neosol.io">
+          hello@neosol.io
+        </a>
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "neosol",
+        "url": "https://neosol.io",
+        "email": "hello@neosol.io",
+        "description": "Software engineering for complex systems, technical R&D, and ambitious projects."
+      }
+    </script>
+    <script src="js/hero-viz.js" defer></script>
+    <script src="js/pipeline-viz.js" defer></script>
+    <script src="js/observability-viz.js" defer></script>
+    <script src="js/risk-viz.js" defer></script>
+    <script src="js/ecg-viz.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
